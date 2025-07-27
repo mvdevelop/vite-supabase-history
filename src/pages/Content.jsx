@@ -11,7 +11,7 @@ const Content = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3000/content'); // URL atualizado
+        const response = await fetch('http://localhost:3001/content'); // URL atualizado
         const json = await response.json();
         setData(json);
       } catch (error) {
