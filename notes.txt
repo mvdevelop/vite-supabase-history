@@ -1,0 +1,134 @@
+
+// antigo app.jsx
+import React from 'react';
+
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Header from './components/Header';
+//import Content from './pages/Content';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+
+function App() {
+
+  return (
+    <>
+      <Header />
+      <Home />
+      <Footer />
+    </>
+  )
+}
+
+export default App;
+
+// App.jsx (save)
+import React, { useState, useEffect } from 'react';
+
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Login from './pages/Login';
+
+function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  if (!isLoggedIn) {
+    return <Login handleLogin={handleLogin} />;
+  }
+
+  return (
+    <>
+      <Header />
+      <Home />
+      <Footer />
+    </>
+  );
+}
+
+export default App;
+
+// Login.jsx (save)
+import React, { useState } from 'react';
+import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
+
+const Login = () => {
+  const [isLogin, setIsLogin] = useState(true);
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [confirmeSenha, setConfirmeSenha] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (isLogin) {
+      // Lógica de login
+      console.log('Login:', email, senha);
+    } else {
+      // Lógica de registro
+      console.log('Registro:', nome, email, senha, confirmeSenha);
+    }
+  };
+
+  return (
+    <Container className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+      <Row>
+        <Col xs={12} md={6} className="mx-auto w-100">
+          <Card className="p-4">
+            <Card.Title className="text-center">
+              {isLogin ? 'Login' : 'Registro'}
+            </Card.Title>
+            <Form onSubmit={handleSubmit}>
+              {!isLogin && (
+                <Form.Group controlId="nome">
+                  <Form.Label>Nome</Form.Label>
+                  <Form.Control type="text" value={nome} onChange={(e) => setNome(e.target.value)} />
+                </Form.Group>
+              )}
+              <Form.Group controlId="email">
+                <Form.Label>Email</Form.Label>
+                <Form.Control type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+              </Form.Group>
+              <Form.Group controlId="senha">
+                <Form.Label>Senha</Form.Label>
+                <Form.Control type="password" value={senha} onChange={(e) => setSenha(e.target.value)} />
+              </Form.Group>
+              {!isLogin && (
+                <Form.Group controlId="confirmeSenha">
+                  <Form.Label>Confirme sua senha</Form.Label>
+                  <Form.Control type="password" value={confirmeSenha} onChange={(e) => setConfirmeSenha(e.target.value)} />
+                </Form.Group>
+              )}
+              <Button variant="primary" type="submit" className="w-100 mt-3">
+                {isLogin ? 'Login' : 'Registrar'}
+              </Button>
+              <p className="text-center mt-3">
+                {isLogin ? 'Não tem uma conta?' : 'Já tem uma conta?'}
+                <Button variant="link" onClick={() => setIsLogin(!isLogin)}>
+                  {isLogin ? 'Registrar' : 'Login'}
+                </Button>
+              </p>
+            </Form>
+          </Card>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+export default Login;
