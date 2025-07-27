@@ -12,7 +12,7 @@ export default function Home() {
         <Carousel.Item>
           <img
             className="img d-block w-100"
-            src="src/img/african-wall.jpg"
+            src="public/img/african-wall.jpg"
             alt="Slide 1"
           />
           <Carousel.Caption>
@@ -23,7 +23,7 @@ export default function Home() {
         <Carousel.Item>
           <img
             className="img d-block w-100"
-            src="src/img/banner-history.jpg"
+            src="public/img/banner-history.jpg"
             alt="Slide 2"
           />
           <Carousel.Caption>
@@ -34,7 +34,7 @@ export default function Home() {
         <Carousel.Item>
           <img
             className="img d-block w-100"
-            src="src/img/egypt-wall.jpg"
+            src="public/img/egypt-wall.jpg"
             alt="Slide 3"
           />
           <Carousel.Caption>
