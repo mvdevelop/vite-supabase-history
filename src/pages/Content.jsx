@@ -11,7 +11,7 @@ const Content = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:3001/content'); // URL atualizado
+        const response = await fetch('https://backend-tawny-mu-84.vercel.app/api/contents'); // URL atualizado
         const json = await response.json();
         setData(json);
       } catch (error) {
@@ -47,11 +47,12 @@ const Content = () => {
           <Col key={item.id} xs={12} sm={6} md={4} lg={3}>
             <Card>
               <Card.Header>
-                <h2>{item.nome}</h2>
+                <h2>{item.title}</h2>
               </Card.Header>
               <Card.Body>
                 <Image src={item.imagem} alt={item.nome} fluid />
-                <p>{item.descricao}</p>
+                <p>{item.body}</p>
+                <p>{item.createdAt}</p>
               </Card.Body>
             </Card>
           </Col>
