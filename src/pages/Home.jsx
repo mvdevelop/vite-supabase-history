@@ -11,8 +11,8 @@ export default function Home() {
       <Carousel>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            src="https://capacity.iso.org/files/live/sites/cb-mini/files/projects/project_strategic.jpg/thumbnails/1200x300"
+            className="img d-block w-100"
+            src="src/img/african-wall.jpg"
             alt="Slide 1"
           />
           <Carousel.Caption>
@@ -22,8 +22,8 @@ export default function Home() {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            src="https://capacity.iso.org/files/live/sites/cb-mini/files/projects/project_strategic.jpg/thumbnails/1200x300"
+            className="img d-block w-100"
+            src="src/img/banner-history.jpg"
             alt="Slide 2"
           />
           <Carousel.Caption>
@@ -33,8 +33,8 @@ export default function Home() {
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
-            src="https://capacity.iso.org/files/live/sites/cb-mini/files/projects/project_strategic.jpg/thumbnails/1200x300"
+            className="img d-block w-100"
+            src="src/img/egypt-wall.jpg"
             alt="Slide 3"
           />
           <Carousel.Caption>
