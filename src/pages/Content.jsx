@@ -47,12 +47,12 @@ const Content = () => {
           <Col key={item.id} xs={12} sm={6} md={4} lg={3}>
             <Card>
               <Card.Header>
-                <h2>{item.title}</h2>
+                <h2>{item.nome}</h2>
               </Card.Header>
               <Card.Body>
                 <Image src={item.imagem} alt={item.nome} fluid />
-                <p>{item.body}</p>
-                <p>{item.createdAt}</p>
+                <p>{item.periodo}</p>
+                <p>{item.descricao}</p>
               </Card.Body>
             </Card>
           </Col>
