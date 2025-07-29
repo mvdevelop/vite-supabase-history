@@ -1,0 +1,28 @@
+
+.login-container {
+    padding: 1em;
+    width: 400px;
+    margin: auto;
+}
+
+.login-container button {
+    border: none;
+    padding: .5em;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.466) 1px 1px 1px;
+}
+
+.login-container input {
+    border: solid .1px rgba(0, 0, 0, 0.171);
+    padding: .5em;
+    border-radius: 5px;
+}
+
+.login-container .login-logo {
+    gap: 1em;
+    align-items: center;
+}
+
+.login-container .login-logo img {
+    width: 3em;
+}
