@@ -10,7 +10,7 @@ import logo from '../../public/history-icon.jpg';
 
 const supabase = createClient(
   'https://pyeefbssdgedhifudsar.supabase.co',
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'
+  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB5ZWVmYnNzZGdlZGhpZnVkc2FyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTAzMzgzMTMsImV4cCI6MjA2NTkxNDMxM30.-1CNoKdasGpTud1feKiYknrCvhxJTJ7aKuQXn7L5BAs'
 );
 
 const customTheme = {
