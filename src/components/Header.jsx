@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-import logo from 'public/history-icon.png';
+import logo from 'public/history-icon.svg';
 import './Header.css';
 
 import Button from 'react-bootstrap/Button';
