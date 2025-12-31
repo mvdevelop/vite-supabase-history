@@ -1,12 +1,93 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🕒 Vite Supabase History
+O Vite Supabase History é uma aplicação web moderna desenvolvida para o gerenciamento e persistência de históricos de dados. Utilizando a velocidade do Vite, a robustez do React e o poder do Supabase como Backend-as-a-Service, a plataforma oferece uma experiência de usuário fluida com uma interface limpa construída em Bootstrap.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
+Persistência em Tempo Real: Sincronização imediata de dados com o PostgreSQL do Supabase.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Autenticação: Sistema de login seguro (opcional, dependendo da sua implementação).
 
-## Expanding the ESLint configuration
+Gestão de Histórico: Criação, leitura e exclusão de registros históricos.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Interface Responsiva: Design adaptável para qualquer dispositivo utilizando componentes do Bootstrap.
+
+Performance Otimizada: Build ultra-rápido e Hot Module Replacement (HMR) via Vite.
+
+## 🛠️ Tecnologias Utilizadas
+React: Biblioteca para construção da interface de usuário.
+
+Vite: Ferramenta de build e servidor de desenvolvimento de alta performance.
+
+Supabase: Banco de dados PostgreSQL, autenticação e API REST automática.
+
+Bootstrap 5: Framework CSS para estilização rápida e componentes responsivos.
+
+React Icons: Para ícones intuitivos e leves.
+
+## 📦 Como rodar o projeto
+Pré-requisitos
+Node.js instalado (versão 18+)
+
+Uma conta e projeto criado no Supabase
+
+Passo a Passo
+Clone o repositório:
+
+Bash
+
+git clone https://github.com/mvdevelop/vite-supabase-history.git
+cd vite-supabase-history
+Instale as dependências:
+
+Bash
+
+npm install
+Configure as Variáveis de Ambiente: Crie um arquivo .env na raiz do projeto e adicione suas credenciais do Supabase:
+
+Snippet de código
+
+VITE_SUPABASE_URL=sua_url_aqui
+VITE_SUPABASE_ANON_KEY=sua_chave_anon_aqui
+Inicie o servidor de desenvolvimento:
+
+Bash
+
+npm run dev
+Acesse: http://localhost:5173
+
+## 📁 Estrutura do Projeto
+Plaintext
+
+vite-supabase-history/
+├── src/
+│   ├── components/   # Componentes reutilizáveis (Tabelas, Formulários)
+│   ├── config/       # Configuração do cliente Supabase
+│   ├── hooks/        # Hooks personalizados para busca de dados
+│   ├── pages/        # Telas principais (Home, History, Login)
+│   └── App.jsx       # Ponto de entrada e rotas
+├── public/           # Arquivos estáticos
+├── .env.example      # Exemplo de variáveis de ambiente
+└── index.html        # Estrutura base HTML
+
+## 🗄️ Estrutura do Banco de Dados (Sugestão)
+Para que o projeto funcione corretamente, certifique-se de ter uma tabela no Supabase com os seguintes campos:
+
+id: uuid (Primary Key)
+
+created_at: timestamp
+
+title: text
+
+description: text
+
+user_id: uuid (Foreign Key para auth.users)
+
+## 👨‍💻 Autor
+Desenvolvido por mvdevelop.
+
+GitHub: @mvdevelop
+
+LinkedIn: Seu Nome Aqui
+
+## 📄 Licença
+Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
